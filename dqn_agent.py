@@ -14,14 +14,13 @@ GAMMA = 0.99            # discount factor
 TAU = 1e-3              # for soft update of target parameters
 LR = 5e-4               # learning rate
 UPDATE_EVERY = 4        # how often to update the network
-DDQL = True             # Use Dual Q-Learning modification
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 class Agent():
     """Interacts with and learns from the environment."""
 
-    def __init__(self, state_size, action_size, seed):
+    def __init__(self, rainbow, state_size, action_size, seed):
         """Initialize an Agent object.
 
         Params
@@ -33,6 +32,7 @@ class Agent():
         self.state_size = state_size
         self.action_size = action_size
         self.seed = random.seed(seed)
+        self.Rainbow = rainbow
 
         # Q-Network
         self.qnetwork_local = QNetwork(state_size, action_size, seed).to(device)
@@ -87,14 +87,12 @@ class Agent():
         states, actions, rewards, next_states, dones = experiences
 
         # Get max predicted Q values (for next states) from target model
-        if not DDQL:
+        if not self.Rainbow.get("DDQN"):
             Q_targets_next  = self.qnetwork_target(next_states).detach().max(1)[0].unsqueeze(1)
         else:
-            pdb.set_trace()
+            # Identify argMax on local network
             MaxActionIndex = self.qnetwork_local(next_states).detach().max(1)[1].unsqueeze(1)
-            print(Q_targets_next)
-            print("/n")
-            print(MaxActionIndex)
+            # Double Q-Learning evaluation
             Q_targets_next = self.qnetwork_target(next_states).gather(1, MaxActionIndex)
 
         # Compute Q targets for current states
