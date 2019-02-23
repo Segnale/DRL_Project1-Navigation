@@ -20,3 +20,23 @@ Beside the Unity enviroment, Python 3.6 must be available with the Unity ML-Agen
 ## Instructions
 
 Instruction to run the code are provided along with the "Navigation.ipynb".
+The notebook is devided in few steps:
+1. Starting the Unity enviroment and setup the defaul brain to address one agent.
+2. Analisys of the State and Action Spaces provided by the Unity enviroment.
+3. Random Agent acting in the enviroment (example of the interaction between an agent and the enviroment).
+4. Initial setup of the parameters of the DQN Algorithm to train the agent.
+5. DQN Vanilla training.
+6. Double DQN training.
+7. Dueling Network Architecture for DQN training.
+8. Combination of the DQN improvements at points 6 and 7.
+9. Results comparison.
+10. An example of a trained agent in the bananas colletion enviroment.
+
+## ToDo list
+
+This Deep Q-Learning algorithm can be still improved with proved extensions.
+Here the planned implementations:
+1.Prioritized replay
+2.Distributional DQN
+
+Use the *Navigation_Pixels.ipynb* and adapt the agent code to solve the banana collection enviroment using raw pixels. That will require mainly the modification of the *model.py* to include convolutional layers.
