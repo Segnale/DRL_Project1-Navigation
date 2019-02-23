@@ -2,7 +2,7 @@ import numpy as np
 import random
 from collections import namedtuple, deque
 
-from model import QNetwork
+from model import DQN , Duel_DQN
 import pdb
 import torch
 import torch.nn.functional as F
@@ -35,8 +35,13 @@ class Agent():
         self.Rainbow = rainbow
 
         # Q-Network
-        self.qnetwork_local = QNetwork(state_size, action_size, seed).to(device)
-        self.qnetwork_target = QNetwork(state_size, action_size, seed).to(device)
+        if self.Rainbow.get("Dueling"):
+            self.qnetwork_local = Duel_DQN(state_size, action_size, seed).to(device)
+            self.qnetwork_target = Duel_DQN(state_size, action_size, seed).to(device)
+        else:
+            self.qnetwork_local = DQN(state_size, action_size, seed).to(device)
+            self.qnetwork_target = DQN(state_size, action_size, seed).to(device)
+
         self.optimizer = optim.Adam(self.qnetwork_local.parameters(), lr=LR)
 
         # Replay memory
