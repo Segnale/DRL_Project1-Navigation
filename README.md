@@ -47,7 +47,7 @@ The notebook is devided in few steps:
 7. Dueling Network Architecture for DQN training.
 8. Combination of the DQN improvements at points 6 and 7.
 9. Results comparison.
-10. An example of a trained agent in the bananas colletion enviroment.
+10. An example of a trained agent in the bananas collection enviroment.
 
 The file `my_methods.py` provides the implementation of the DQN algorithm.
 The agent class is included in `dqn_agent.py` while the Deep Neural Network models used by the agent are included in the `model.py`.
