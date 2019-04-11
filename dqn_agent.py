@@ -1,6 +1,7 @@
 import numpy as np
 import random
 from collections import namedtuple, deque
+import os
 
 from model import DQN , Duel_DQN
 import pdb
@@ -129,6 +130,12 @@ class Agent():
         """
         for target_param, local_param in zip(target_model.parameters(), local_model.parameters()):
             target_param.data.copy_(tau*local_param.data + (1.0-tau)*target_param.data)
+        
+    def save(self, path):
+        dirn = os.path.dirname(path)
+        if not os.path.exists(dirn):
+            os.mkdir(dirn)
+        torch.save(self.qnetwork_local.state_dict(), path)
 
 
 class ReplayBuffer:

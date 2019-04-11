@@ -5,7 +5,7 @@ import torch.nn.functional as F
 class DQN(nn.Module):
     """Actor (Policy) Model."""
 
-    def __init__(self, state_size, action_size, seed, fc1_units=64, fc2_units=64):
+    def __init__(self, state_size, action_size, seed, fc1_units=64, fc2_units=32):
         """Initialize parameters and build model.
         Params
         ======
@@ -30,7 +30,7 @@ class DQN(nn.Module):
 class Duel_DQN(nn.Module):
     """Actor (Policy) Model."""
 
-    def __init__(self, state_size, action_size, seed, fc1_units=64, fc2_units=64):
+    def __init__(self, state_size, action_size, seed, fc1_units=64, fc2_units=32):
         """Initialize parameters and build model.
         Params
         ======
