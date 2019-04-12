@@ -50,23 +50,5 @@ The notebook is devided in few steps:
 10. An example of a trained agent in the bananas collection enviroment.
 
 The file `my_methods.py` provides the implementation of the DQN algorithm.
-The agent class is included in `dqn_agent.py` while the Deep Neural Network models used by the agent are included in the `model.py`.
+The agent class is included in `dqn_agent.py` while the Deep Neural Network models used by the agent are in the file `model.py`.
 
-## ToDo list
-
-Much more stuff can be done to around this project.
-
-### Training Algorithm improvements
-
-This Deep Q-Learning algorithm can be still improved with proved extensions.
-Here the planned implementations:
-1.Prioritized replay
-2.Distributional DQN
-
-### Deep Analysis of the Paramenters and Architecture
-
-Wide analysis of the impact of the training parameters and model architecture on the training performance. For that, I will setup a specific notebook.
-
-### Step to Pixel Based State Space
-
-Use the *Navigation_Pixels.ipynb* and adapt the agent code to solve the banana collection enviroment using raw pixels. That will require mainly the modification of the `model.py` to include convolutional layers.
