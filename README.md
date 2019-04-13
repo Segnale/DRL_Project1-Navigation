@@ -52,5 +52,5 @@ The notebook is devided in few steps:
 The file `my_methods.py` provides the implementation of the DQN algorithm.
 The agent class is included in `dqn_agent.py` while the Deep Neural Network models used by the agent are in the file `model.py`.
 
-More information about the resolution method used can be found in the [`Report.md`](https://github.com/Segnale/DRL_Project1-Navigation/edit/master/Report.md) of this repository.
+More information about the resolution method used can be found in the [`Report.md`](https://github.com/Segnale/DRL_Project1-Navigation/blob/master/Report.md) of this repository.
 
