@@ -7,7 +7,7 @@ This aim to solve the navigation problem proposed in the Udacity's [Deep Reinfor
 
 ## Installation
 
-To run this code, you will need to download the prebuild Unity enviroment not provided in the repository. You need to select the enviroment for your OS:
+To run this code, you will need to download the prebuild Unity environment not provided in the repository. You need to select the environment for your OS:
 * [x Linux](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip)
 * [x Mac OSX](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana.app.zip)
 * [x Windows (32-bits)](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86.zip)
@@ -15,7 +15,7 @@ To run this code, you will need to download the prebuild Unity enviroment not pr
 
 Place the file in the DRL_Project#1-Navigation Folder and unzip.
 
-Beside the Unity enviroment, Python 3.6 must be available with the Unity ML-Agents [(see this link)](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Installation.md) installed, and few more packages (see `enviroment.env`).
+Beside the Unity environment, Python 3.6 must be available with the Unity ML-Agents [(see this link)](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Installation.md) installed, and few more packages (see `environment.env`).
  
 ## Environment 
 
@@ -38,17 +38,19 @@ The task is episodic, and it is considered solved if the agent can get an averag
 
 Open `Navigation.ipynb` and run the code alongside with the provided instructions.
 The notebook is devided in few steps:
-1. Starting the Unity enviroment and setup the defaul brain to address one agent.
-2. Analisys of the State and Action Spaces provided by the Unity enviroment.
-3. Random Agent acting in the enviroment (example of the interaction between an agent and the enviroment).
+1. Starting the Unity environment and setup the default brain to address one agent.
+2. Analysis of the State and Action Spaces provided by the Unity environment.
+3. Random Agent acting in the enviroment (example of the interaction between an agent and the environment).
 4. Initial setup of the parameters of the DQN Algorithm to train the agent.
 5. DQN Vanilla training.
 6. Double DQN training.
 7. Dueling Network Architecture for DQN training.
 8. Combination of the DQN improvements at points 6 and 7.
 9. Results comparison.
-10. An example of a trained agent in the bananas collection enviroment.
+10. An example of a trained agent in the bananas collection environment.
 
 The file `my_methods.py` provides the implementation of the DQN algorithm.
 The agent class is included in `dqn_agent.py` while the Deep Neural Network models used by the agent are in the file `model.py`.
+
+More information about the resolution method used can be found in the [`Report.md`](https://github.com/Segnale/DRL_Project1-Navigation/edit/master/Report.md) of this repository.
 
