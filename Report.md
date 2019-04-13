@@ -15,8 +15,8 @@ More details about DQN can be found in this [pdf](https://storage.googleapis.com
 
 ### Improvements
 Few variations of the DQN implementation are included in the agent. They can be managed with the `rainbow` dictionary, which includes:
-- `'DDQN'` (Double Deep Q-Learning)[https://arxiv.org/abs/1509.06461]: decoupling the evaluation of the Q function for the action taken just by using the target network.
-- `'Dueling'` (Dueling networks)[https://arxiv.org/abs/1511.06581]: the `Duel_DQN` model is used in place of the standard `DQN` in `model.py`. Here the DNN is split in two parts, one in charge of the state-value estimation and the other calculating the advantages for each action. 
+- `'DDQN'` [Double Deep Q-Learning](https://arxiv.org/abs/1509.06461): decoupling the evaluation of the Q function for the action taken just by using the target network.
+- `'Dueling'` [Dueling networks](https://arxiv.org/abs/1511.06581): the `Duel_DQN` model is used in place of the standard `DQN` in `model.py`. Here the DNN is split in two parts, one in charge of the state-value estimation and the other calculating the advantages for each action. 
 
 ## Model and Parameters
 The file `model.py` holds the classes of the Neural Network for the generic DQN and the Dueling DQN.
