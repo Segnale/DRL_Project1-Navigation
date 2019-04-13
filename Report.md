@@ -52,17 +52,17 @@ Running the trained model, the agent achieves easily 20 points in one single epi
 ## ToDo list
 Much more stuff can be done to around the project.
 
-### Training Algorithm improvements
+#### Training Algorithm improvements
 This Deep Q-Learning algorithm can be still improved with proved extensions.
 Here the planned implementations:
 1.Prioritized replay
 2.Distributional DQN
 
-### Deep Analysis of the Parameters and Architecture
+#### Deep Analysis of the Parameters and Architecture
 Wide analysis of the impact of the training parameters and model architecture on the training performance. A specific Jupyter Notebook will be set up for the purpose.
 
-### Improve Exploration Strategy
+#### Improve Exploration Strategy
 The exploration of the environment for part of the agent is an important aspect of the training, particularly when the environment is not stable. The randomness of the action taken to promote exploration can be improved with more sophisticated strategies taking into account the learning process. A more complex environment may be needed for testing.
 
-### Step to Pixel Based State Space
+#### Step to Pixel Based State Space
 Use the *Navigation_Pixels.ipynb* and adapt the agent code to solve the banana collection environment using raw pixels. That will require mainly the modification of the `model.py` to include convolutional layers.
