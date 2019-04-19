@@ -25,19 +25,19 @@ In the case of the Dueling Network Architectures, the DNN for the evaluation of 
 The state-value is combined with the advantage actions with the mean operator. 
 
 Here a summary of parameters used:
-  Learning Rate: `LR` = 5e-4,
-  Soft Update `TAU` = 1e-3,
-  `GAMMA` = 0.99,
-  Update frequency `UPDATE_EVERY` = 4
+  - Learning Rate: `LR` = 5e-4,
+  - Soft Update `TAU` = 1e-3,
+  - `GAMMA` = 0.99,
+  - Update frequency `UPDATE_EVERY` = 4
 
   Replay Buffer
-    size: `BUFFER_SIZE` = 10000,
-    minibatch size: `BATCH_SIZE` = 64
+  - size: `BUFFER_SIZE` = 10000,
+  - minibatch size: `BATCH_SIZE` = 64
   
   Epsilon-greedy:
-    Starting Epsilon `eps_start` = 1.0
-    Minimum Epsilon `eps_end` = 0.01
-    Epsilon decay for episode `eps_decay` = 0.995
+  - Starting Epsilon `eps_start` = 1.0
+  - Minimum Epsilon `eps_end` = 0.01
+  - Epsilon decay for episode `eps_decay` = 0.995
 
 ## Results
 
@@ -55,8 +55,8 @@ Much more stuff can be done to around the project.
 #### Training Algorithm improvements
 This Deep Q-Learning algorithm can be still improved with proved extensions.
 Here the planned implementations:
-1.Prioritized replay
-2.Distributional DQN
+1. Prioritized replay
+1. Distributional DQN
 
 #### Deep Analysis of the Parameters and Architecture
 Wide analysis of the impact of the training parameters and model architecture on the training performance. A specific Jupyter Notebook will be set up for the purpose.
